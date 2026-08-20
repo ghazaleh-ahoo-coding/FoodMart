@@ -1,0 +1,232 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+/* header style */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 1.5rem;
+    padding: 1rem 2rem;
+    background: #033003;
+    color: white;
+}
+
+.navBar,
+.menu,
+.search .operation {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+
+.menu {
+    list-style: none;
+}
+
+.menu a {
+    color: white;
+    text-decoration: none;
+}
+a:hover{
+    color: #FFC107;
+}
+
+.searchBox {
+    height: 2rem;
+    position: relative;
+    display: flex;
+    border: 1px solid white;
+}
+
+.searchBox img {
+    position: absolute;
+    left: 5px;
+    top: 3px;
+    height: 85%;
+}
+
+.searchBox input,
+select {
+    background-color: #033003;
+    color: white;
+    cursor: pointer;
+}
+
+.operation {
+    display: flex;
+    /* makes its direct .iconBox children sit side by side */
+    gap: 2rem;
+}
+
+.iconBox {
+    display: flex;
+    /* controls the image and label inside one box */
+    flex-direction: column;
+    /* image on top, label underneath */
+    align-items: center;
+    /* horizontally centers label below image */
+    gap: 0.3rem;
+}
+/* banner */
+.banner{
+    background-color: #FFC107;
+    padding: 4rem 7rem;
+    color: #033003;
+    position: relative;
+}
+.margintop-1rem{
+    margin-top: 1rem;
+}
+.disCount {
+   background-color: #B4C8B1;
+   width: 140px;
+  height: 30px;
+  display: inline-block;
+  text-align: center;
+  line-height: 1.5rem;
+  border-radius: 2.5rem;
+  font-size: 1rem;
+  font-weight: bold;
+}
+.banner h1{
+    font-size: 5rem;
+}
+p{
+    font-size: 20px;
+}
+.moreBtn{
+    background-color: #B4C8B1;
+    border: none;
+    width: 200px;
+    height: 40px;
+    border-radius: 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    color: #033003;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+}
+
+.discountBadge{
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 5rem;
+    margin: auto;
+    text-align: center;
+    width: 8rem;
+}
+.discountImg{
+    width: 100% ;
+}
+.discountBadge strong {
+  position: absolute;
+
+  /* Move the text's top-left corner to the badge center. */
+  top: 50%;
+  left: 50%;
+
+  /* Move the text back by half of its own width and height,
+     so its actual center sits exactly in the badge center. */
+  transform: translate(-50%, -50%);
+
+  color: #FFC107;
+}
+.fruitBanner{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    width: 40%;
+}
+.fruitImage{
+    width: 100%;
+}
+
+/* Container Style */
+/* Product Intro Styles */
+
+.titleIntroduction{
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin-top: 3rem;
+    margin-bottom: 1rem;
+
+    
+}
+.titleIntroduction strong{
+    color: #033003;
+    font-size: 2.5rem;
+}
+.productsSection{
+    display: flex; 
+    width: 70%;
+    flex-wrap: wrap;
+    gap: 1rem;
+    justify-content: center;
+    margin: 3rem auto;
+}
+.productItem{
+    width: 23%;
+    border-radius: 1rem;
+    overflow: hidden;
+    position: relative;
+    color: white;
+    aspect-ratio: 1;     /* For squer boxes */
+}
+.productImg{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.productInformation{
+    position: absolute;
+    bottom: 0;
+    padding: 0.8rem;
+     z-index: 1;  /*we use this for info that can come on the product cover */
+}
+.productInformation h4{
+    color: #FFC107;
+}
+.productInformation p{
+    font-size: 0.7rem;
+    margin-bottom: 0.5rem;
+}
+.productInfromation button,
+.productBtn{
+    color: #033003;
+    background-color: #FFC107;
+    font-size:0,7rem;
+    font-weight: bolder;
+    width: 126px; 
+    border-radius: 9px;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem;
+    padding: .5rem .5rem;
+    cursor: pointer;
+}
+.productInformation img,
+.productBtn img{
+    width: 0.5rem;
+}
+.productCover{
+    position: absolute;
+    background-color: rgba(13, 11, 11, 0.501);
+    width: 100%;
+    height: 100%;
+    top: 0;
+    transition: all 1s;
+}
+.productItem:hover .productCover {
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
