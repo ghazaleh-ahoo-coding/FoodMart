@@ -49,9 +49,8 @@ a:hover{
     height: 85%;
 }
 
-.searchBox input,
-select {
-    background-color: #033003;
+.searchInput{
+    background-color: #043004;
     color: white;
     cursor: pointer;
 }
@@ -147,6 +146,18 @@ p{
 .fruitImage{
     width: 100%;
 }
+.cardImg{
+    display: block;
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 1rem;
+}
+.bgCard{
+    background-color: #FFFFFF;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1) inset;
+}
+
 
 /* Container Style */
 /* Product Intro Styles */
@@ -228,5 +239,318 @@ p{
 }
 .productItem:hover .productCover {
   background-color: rgba(0, 0, 0, 0.1);
+}
 
+/* Product cards */
+.cardSection {
+    display: grid;
+    grid-template-columns: repeat(3, minmax(0, 320px));
+    justify-content: center;
+    align-items: stretch;
+    gap: 2rem;
+    width: min(100% - 2rem, 1100px);
+    margin: 3rem auto;
+}
+
+.cardItem {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    padding: 1rem;
+    color: #033003;
+    border: 1px solid green;
+    border-radius: 1rem;
+}
+
+.cardItem > img {
+    display: block;
+    width: 100%;
+    height: 260px;
+    object-fit: contain;
+}
+
+.cardInformation {
+    display: flex;
+    flex: 1;
+    flex-direction: column;
+    gap: 1.5rem;
+}
+
+.cardItem .inputBox {
+    display: grid;
+    grid-template-columns: 3fr 2fr;
+    gap: 1rem;
+    width: 100%;
+}
+
+.cardItem .sizeBox,
+.cardItem .quantityBox {
+    width: auto;
+}
+
+.cardBtn {
+    font-weight: bolder;
+    width: 100%;
+    margin-top: 0.5rem;
+    padding: 0.5rem;
+    color: #033003;
+    background-color: #FFC107;
+    border: 0;
+    border-radius: 1.5rem;
+    cursor: pointer;
+}
+.arrowIcon{
+    width: 2rem;
+}
+.heart {
+    position: absolute;
+    top: 1.5rem;
+    right: 1.5rem;
+    font-size: 2rem;
+}
+.click:focus{
+    color: #FFC107;
+}
+.p-h-center{
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+.card-image{
+    top: -2rem;
+    right: -2rem;
+}
+.mainBannerRight , .mainBannerLeft{
+    display: flex;
+    width: 50%;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-blend-mode: overlay;
+    padding: 7rem 0 2rem 0;
+    color: white;
+}
+.mainBannerRight{
+    background: url(/FoodMart/assets/image/berry.png) center/cover no-repeat, rgba(0, 0, 0, 0.464)
+}
+.mainBannerLeft{
+    background: url(/FoodMart/assets/image/lemon.png) center/cover no-repeat, rgba(0, 0, 0, 0.464)
+}
+
+/* Class based styles */
+.align-item-center{
+    align-items: center;
+}
+.justify-content-space{
+    justify-content: space-around;
+}
+
+.justify-content-center{
+    justify-content: center;
+}
+.text-green{
+    color: #033003;
+}
+.text-Green{
+    color: #0A490A;
+}
+.p-relative{
+    position: relative;
+}
+.p-absolute{
+    position: absolute;
+}
+.d-flex{
+    display: flex;
+}
+.rounded-2{
+    border-radius: 1rem;
+}
+.bg-orange{
+    background-color: #E46002;
+}
+.bg-pink{
+    background-color:#EF174B ;
+}
+.bg-Green{
+    background-color:#327613 ;
+}
+.w-50{
+    width: 50%;
+}
+.h-50{
+    height: 50px;
+}
+.w-100{
+    width: 100%;
+}
+.broder-green{
+    border: 1px solid green;
+}
+.border-green{
+    border: 1px solid green;
+}
+.align-items-center{
+    align-items: center;
+}
+.max-width-600{
+    max-width: 400px;
+}
+.p-1{
+    padding: 0.5rem;
+}
+.p-2{
+    padding: 2rem;
+}
+.p-3{
+    padding: 2rem;
+}
+.mt-1{
+    margin-top: 0.5rem;
+}
+.mt-2{
+  margin-top: 1rem;
+}
+.mt-3{
+    margin-top: 2rem;
+}
+.mt-4{
+    margin-top: 4rem;
+}
+.mt-5{
+    margin-top: 5rem;
+}
+.text-center{
+    text-align: center;
+}
+.text-yellow{
+    color: #FFC107;
+}
+.text-1{
+    font-size: 0.5rem;
+
+}
+.text-2{
+    font-size: 1rem;
+}
+.text-3{
+    font-size: 1.5rem;
+}
+.text-4{
+    font-size: 2rem;
+}
+.text-white {
+  color: white !important;
+}
+.list-style-none{
+    list-style: none;
+}
+
+.flex-direction-column{
+    flex-direction: column;
+}
+.gap-1{
+    gap: 1.5rem;
+}
+.gap-2{
+    gap: 2rem;
+}
+.gap-3{
+    gap: 1.5rem;
+}
+.gap-4{
+    gap: 3rem;
+}
+.w-25{
+    width: 25%;
+}
+.w-90{
+    width: 90%;
+}
+.m-2{
+    margin: 2rem;
+}
+.w-60{
+    width: 60%;
+}
+.w-70{
+    width: 70%;
+}
+.w-80{
+    width: 80%;
+}
+.w-40{
+    width: 40%;
+}
+.w-2{
+    width: 20%;
+}
+
+.left-m1 {
+  left: -1rem !important;
+}
+.right-m1{
+    right: -1rem;
+}
+.left-1{
+   left: 0.5rem;
+}
+.right-1{
+    right: 0.5rem;
+}
+.left-2{
+   left: 1.5rem;
+}
+.right-2{
+    right: 1.5rem;
+}
+.left-0{
+     left: 0 !important;
+}
+.right-0{
+      right: 0 !important;
+}
+.top-1{
+    top: 1.5rem;
+}
+.bg-yellow{
+    background-color: #FFC107;
+}
+.text-left{
+    text-align: left;
+}
+.w-33{
+    width: 30%;
+}
+.border-none{
+    border: none;
+}
+.rounded-1{
+    border-radius: 1.5rem;
+}
+.box-shadow{
+    box-shadow: 0 0 0 0.4 black inset;
+}
+.border-radius{
+    border-radius: 0 0 0 0 ;
+}
+.bg-green{
+    background-color: #033003;
+}
+.bg-white{
+    background-color: white;
+}
+
+.pointer{
+    cursor: pointer;
+}
+.border-white{
+    border: 1px solid white;
+}
+.p-inline-3{
+    padding-inline: 1.5rem;
+}
+.text-bold{
+    font-weight: bold;
 }

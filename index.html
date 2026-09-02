@@ -11,7 +11,7 @@
 
 <body>
     <!-- header section -->
-    <header class="header">
+<header class="header">
         <!-- descktop nav section -->
         <nav class="navBar">
             <h2>FoodMart</h2>
@@ -25,11 +25,11 @@
         </nav>
         <!-- search box setion -->
         <div class="searchBox">
-            <input type="text">
-            <select name="" id="">
-                <option value="">All Catagories</option>
-                <option value=""> Fruit</option>
-                <option value=""> Vegrtable</option>
+            <input id="site-search" name="search" type="search" class="searchInput" aria-label="Search products">
+            <select id="category-filter" name="category" class="searchInput" aria-label="Product category">
+                <option value="all">All Categories</option>
+                <option value="fruit">Fruit</option>
+                <option value="vegetable">Vegetable</option>
             </select>
 
 
@@ -43,7 +43,7 @@
             </div>
 
             <div class="iconBox">
-                <img src="assets/image/🦆 icon _hurt_.png" alt="Wishlist">
+                <img src="/FoodMart/assets/image/icon white heart.png" alt="Wishlist">
                 <label>Wishlist</label>
             </div>
 
@@ -56,19 +56,19 @@
         </section>
     </header>
     <!-- Banner section -->
-    <section class="banner">
-        <lable class="disCount margintop-1rem">Daily discount</lable>
-        <h1 class="margintop-1rem"> fruits & <br>
+<section class="banner">
+        <lable class="disCount">Daily discount</lable>
+        <h1 class=""> fruits & <br>
             vegtables</h1>
-        <p class="margintop-1rem">These superfoods are packed with vital nutrients,<br> including vitamins
+        <p class="">These superfoods are packed with vital nutrients,<br> including vitamins
             and minerals that can help <br>keep you health. Plus, they’re easy to <br>
             enjoy-just add water and let the magic happen!</p>
         <button class="moreBtn margintop-1rem">
             <span>View More</span>
-            <img src="/Front_End_Expert/Foodmart/assets/image/Vector.png" alt="">
+            <img src="/FoodMart/assets/image/Vector.png" alt="">
         </button>
         <div class="discountBadge">
-            <img src="/Front_End_Expert/Foodmart/assets/image/Star 1.png" alt="" class="discountImg">
+            <img src="/FoodMart/assets/image/Star 1.png" alt="" class="discountImg">
             <strong class="bannerDiscount"> 20%</strong>
         </div>
         <div class="fruitBanner">
@@ -76,7 +76,7 @@
         </div>
     </section>
     <!-- product Introduction section -->
-    <section class="productIntroduction ">
+<section class="productIntroduction ">
         <div class="titleIntroduction">
             <strong class="textTitleInt">Love our Categories</strong>
             <button class="productBtn">
@@ -198,35 +198,500 @@
                 </div>
                 <div class="productCover"></div>
             </div>
-       </div>
-       </section>
-       <section class="productsection">
-        <div class="productIntroduction">
-            <div class="productBox">
-                <div>
-                    <img src="/Foodmart/assets/image/Icon trans heart.png" alt="">
-                    <img src="/Foodmart/assets/image/Apple.png" alt="">
-                    <p>Fruits</p>
-                    <h2>Pomme</h2>
-                    <img src="/Foodmart/assets/image/Star 2.png" alt="">
-                    <img src="/Foodmart/assets/image/Star 2.png" alt="">
-                    <img src="/Foodmart/assets/image/Star 2.png" alt="">
-                    <img src="/Foodmart/assets/image/Star 2.png" alt="">
-                    <img src="/Foodmart/assets/image/Star 6.png" alt="">
-                    <span>(1)</span>
-                    <p>175.00</p>
-                    <span>DA</span>
-                    <p>240.00</p>
-                    <span>DA</span>
+        </div>
+    </section>
 
-
-
-                </div>
-            </div>
+    <!-- Best seller section -->
+    <!-- title -->
+<section class="productIntroduction ">
+        <div class="titleIntroduction">
+            <strong class="textTitleInt">Love our Categories</strong>
+            <button class="productBtn">
+                <span>Show more</span>
+                <img src="/Foodmart/assets/image/Vector.png" alt="">
+            </button>
 
         </div>
-       </section>
-</div>
+    </section>
+    <section class="cardSection">
+        <!-- first card -->
+        <div class="cardItem">
+            <img src="/FoodMart/assets/image/Apple.png" alt="Sliced red apple">
+            <div class="cardInformation">
+                <span>Fruits</span>
+                <strong>Pomme</strong>
+                <div class="starBox">
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9734;</span>
+                    <span class="star text-2">(1)</span>
+                </div>
+                <div class="sellBox">
+                    <b class="text-3">175.00</b>
+                    <small class="text-1">DA</small>
+                    <del class="text-3">240.00</del>
+                    <small class="text-1">DA</small>
+                </div>
+                <div class="inputBox">
+                    <div class="sizeBox">
+                        <label for="product-1-size">Size:</label>
+                        <div class="p-relative">
+                            <select name="size" id="product-1-size" class="p-1 rounded-1 w-100 mt-1 border-green">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <small class="p-h-center right-2">kg</small>
+                        </div>
+                    </div>
+                    <div class="quantityBox">
+                        <label for="product-1-quantity">Quantity:</label>
+                        <div class="p-relative">
+                            <input id="product-1-quantity" name="quantity" type="number" min="1" value="1"
+                                class="p-1 rounded-1 mt-1 w-100 border-green text-center">
+                            <small class="p-h-center right-1 pointer text-2">+</small>
+                            <small class="p-h-center left-1 pointer text-2">-</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="cardBtn">Add to cart</button>
+            </div>
+            <span class="heart p-absolute text-4 top-1 right-2 ">&#9825;</span>
+        </div>
+        <!-- Second card -->
+        <div class="cardItem">
+            <img src="/FoodMart/assets/image/juice.png" alt="Brocoli shake">
+            <div class="cardInformation">
+                <span>Juices</span>
+                <strong>Brocoli Shake</strong>
+                <div class="starBox">
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9734;</span>
+                    <span class="star text-2">(1)</span>
+                </div>
+                <div class="sellBox">
+                    <b class="text-3">175.00</b>
+                    <small class="text-1">DA</small>
+                    <del class="text-3">240.00</del>
+                    <small class="text-1">DA</small>
+                </div>
+                <div class="inputBox">
+                    <div class="sizeBox">
+                        <label for="product-2-size">Size:</label>
+                        <div class="p-relative">
+                            <select name="size" id="product-2-size" class="p-1 rounded-1 w-100 mt-1 border-green">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <small class="p-h-center right-2">kg</small>
+                        </div>
+                    </div>
+                    <div class="quantityBox">
+                        <label for="product-2-quantity">Quantity</label>
+                        <div class="p-relative">
+                            <input id="product-2-quantity" name="quantity" type="number" min="1" value="1"
+                                class="p-1 rounded-1 mt-1 w-100 border-green text-center">
+                            <small class="p-h-center right-1 pointer text-2">+</small>
+                            <small class="p-h-center left-1 pointer text-2">-</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="cardBtn">Add to cart</button>
+            </div>
+            <span class="heart p-absolute text-4 top-1 right-2 ">&#9825;</span>
+        </div>
+        <!-- Third card -->
+        <div class="cardItem">
+            <img src="/FoodMart/assets/image/Donat.png" alt="Chocolate donut">
+            <div class="cardInformation">
+                <span>Bakers</span>
+                <strong>Donuts</strong>
+                <div class="starBox">
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9733;</span>
+                    <span class="star text-yellow text-3">&#9734;</span>
+                    <span class="star text-2">(1)</span>
+                </div>
+                <div class="sellBox">
+                    <b class="text-3">175.00</b>
+                    <small class="text-1">DA</small>
+                    <del class="text-3">240.00</del>
+                    <small class="text-1">DA</small>
+                </div>
+                <div class="inputBox">
+                    <div class="sizeBox">
+                        <label for="product-3-size">Size:</label>
+                        <div class="p-relative">
+                            <select name="size" id="product-3-size" class="p-1 rounded-1 w-100 mt-1 border-green">
+                                <option value="1">1</option>
+                                <option value="2">2</option>
+                                <option value="3">3</option>
+                            </select>
+                            <small class="p-h-center right-2">kg</small>
+                        </div>
+                    </div>
+                    <div class="quantityBox">
+                        <label for="product-3-quantity">Quantity</label>
+                        <div class="p-relative">
+                            <input id="product-3-quantity" name="quantity" type="number" min="1" value="1"
+                                class="p-1 rounded-1 mt-1 w-100 border-green text-center">
+                            <small class="p-h-center right-1 pointer text-2">+</small>
+                            <small class="p-h-center left-1 pointer text-2">-</small>
+                        </div>
+                    </div>
+                </div>
+                <button class="cardBtn">Add to cart</button>
+            </div>
+            <span class="heart p-absolute text-4 top-1 right-2 ">&#9825;</span>
+        </div>
+    </section>
+    <!-- categories section -->
+<section class="productIntroduction bg-green mt-1 p-1 ">
+        <div class="titleIntroduction">
+            <strong class="textTitleInt text-white">Love our Categories</strong>
+            <button class="productBtn">
+                <span>Show more</span>
+                <img src="/Foodmart/assets/image/Vector.png" alt="">
+            </button>
+        </div>
+        <ul class="d-flex justify-content-center gap-2 w-80 list-style-none text-white p-2">
+            <li class="click pointer " tabindex="1">All categories</li>
+            <li class="click pointer " tabindex="1">All categories</li>
+            <li class="click pointer " tabindex="1">All categories</li>
+            <li class="click pointer " tabindex="1">All categories</li>
+        </ul>
+        <!-- first card -->
+        <section class="cardSection ">
+            <div class="cardItem text-white border-white">
+                <img src="/FoodMart/assets/image/Apple.png" alt="Sliced red apple">
+                <div class="cardInformation">
+                    <span>Fruits</span>
+                    <strong>Pomme</strong>
+                    <div class="starBox">
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9734;</span>
+                        <span class="star text-2">(1)</span>
+                    </div>
+                    <div class="sellBox">
+                        <b class="text-3">175.00</b>
+                        <small class="text-1">DA</small>
+                        <del class="text-3">240.00</del>
+                        <small class="text-1">DA</small>
+                    </div>
+                    <div class="inputBox">
+                        <div class="sizeBox">
+                            <label for="product-1-size">Size:</label>
+                            <div class="p-relative">
+                                <select name="size" id="product-1-size" class="p-1 rounded-1 w-100 mt-1 border-green">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <small class="p-h-center right-2">kg</small>
+                            </div>
+                        </div>
+                        <div class="quantityBox">
+                            <label for="product-1-quantity">Quantity:</label>
+                            <div class="p-relative">
+                                <input id="product-1-quantity" name="quantity" type="number" min="1" value="1"
+                                    class="p-1 rounded-1 mt-1 w-100 border-green text-center">
+                                <small class="p-h-center right-1 pointer text-2">+</small>
+                                <small class="p-h-center left-1 pointer text-2">-</small>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cardBtn">Add to cart</button>
+                    <img src="/FoodMart/assets/image/Vector (1).png" alt="" class="p-h-center left-m1">
+                </div>
+                <span class="heart p-absolute text-4 top-1 right-2 ">&#9825;</span>
+            </div>
+            <!-- Second card -->
+            <div class="cardItem text-white border-white">
+                <img src="/FoodMart/assets/image/juice.png" alt="Shake">
+                <div class="cardInformation">
+                    <span>Juices</span>
+                    <strong>Brocolie Shake</strong>
+                    <div class="starBox">
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9734;</span>
+                        <span class="star text-2">(1)</span>
+                    </div>
+                    <div class="sellBox">
+                        <b class="text-3">175.00</b>
+                        <small class="text-1">DA</small>
+                        <del class="text-3">240.00</del>
+                        <small class="text-1">DA</small>
+                    </div>
+                    <div class="inputBox">
+                        <div class="sizeBox">
+                            <label for="product-2-size">Size:</label>
+                            <div class="p-relative">
+                                <select name="size" id="product-2-size" class="p-1 rounded-1 w-100 mt-1 border-green">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <small class="p-h-center right-2">kg</small>
+                            </div>
+                        </div>
+                        <div class="quantityBox">
+                            <label for="product-2-quantity">Quantity</label>
+                            <div class="p-relative">
+                                <input id="product-2-quantity" name="quantity" type="number" min="1" value="1"
+                                    class="p-1 rounded-1 mt-1 w-100 border-green text-center">
+                                <small class="p-h-center right-1 pointer text-2">+</small>
+                                <small class="p-h-center left-1 pointer text-2">-</small>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cardBtn">Add to cart</button>
+                </div>
+                <span class="heart p-absolute text-4 top-1 right-2 ">&#9825;</span>
+            </div>
+            <!-- Third card -->
+            <div class="cardItem text-white border-white">
+                <img src="/FoodMart/assets/image/Donat.png" alt="Donut">
+                <div class="cardInformation">
+                    <span>Bakers</span>
+                    <strong>Donut</strong>
+                    <div class="starBox">
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9733;</span>
+                        <span class="star text-yellow text-3">&#9734;</span>
+                        <span class="star text-2">(1)</span>
+                    </div>
+                    <div class="sellBox">
+                        <b class="text-3">175.00</b>
+                        <small class="text-1">DA</small>
+                        <del class="text-3">240.00</del>
+                        <small class="text-1">DA</small>
+                    </div>
+                    <div class="inputBox">
+                        <div class="sizeBox">
+                            <label for="product-3-size">Size:</label>
+                            <div class="p-relative">
+                                <select name="size" id="product-3-size" class="p-1 rounded-1 w-100 mt-1 border-green">
+                                    <option value="1">1</option>
+                                    <option value="2">2</option>
+                                    <option value="3">3</option>
+                                </select>
+                                <small class="p-h-center right-2">kg</small>
+                            </div>
+                        </div>
+                        <div class="quantityBox">
+                            <label for="product-3-quantity">Quantity</label>
+                            <div class="p-relative">
+                                <input id="product-3-quantity" name="quantity" type="number" min="1" value="1"
+                                    class="p-1 rounded-1 mt-1 w-100 border-green text-center">
+                                <small class="p-h-center right-1 pointer text-2">+</small>
+                                <small class="p-h-center left-1 pointer text-2">-</small>
+                            </div>
+                        </div>
+                    </div>
+                    <button class="cardBtn">Add to cart</button>
+                    <img src="/FoodMart/assets/image/Vector-right.png" alt="" class="p-h-center right-m1">
+                </div>
+                <span class="heart p-absolute text-4 top-1 right-2 ">&#9825;</span>
+            </div>
+        </section>
+    </section>
+    <!-- Best products-->
+<section class="bg-white p-3">
+        <div class="titleIntroduction">
+            <strong class="textTitle">
+                Best Products
+            </strong>
+            <button class="productBtn">
+                <span>Show more</span>
+                <img src="/FoodMart/assets/image/Vector.png" alt="">
+            </button>
+        </div>
+
+        <div class="d-flex justify-content-center gap-3 mt-3">
+            <div class="card-container p-relative bg-orange w-20 rounded-2 p-2">
+                <div class="text-green text-2 text-bold mt-5">Juices</div>
+                <div class="text-green text-3 text-bold">Broccoli shake</div>
+                <div class="text-green text-2">★★★★★ (1)</div>
+                <div class="text-white text-2">175.00 DA</div>
+                <button class="cardBtn text-green rounded-1 bg-yellow p-1 border-green gap-3"> Add to card</button>
+                <img src="/FoodMart/assets/image/pumpkin.png" alt="pumpkin" class="card-image p-absolute w-60 ">
+            </div>
+            <div class="card-container p-relative bg-yellow w-20 rounded-2 p-2">
+                <div class="text-green text-2 text-bold mt-5">Juices</div>
+                <div class="text-green text-3 text-bold">Broccoli shake</div>
+                <div class="text-green text-2"> ★★★★★ (1)</div>
+                <div class="text-white text-2">175.00 DA</div>
+                <button class="cardBtn text-green rounded-1 bg-yellow p-1 border-green gap-3"> Add to card</button>
+                <img src="/FoodMart/assets/image/bannana.png" alt="Bannana" class="card-image p-absolute w-60 ">
+            </div>
+            <div class="card-container p-relative bg-Green w-20 rounded-2 p-2">
+                <div class="text-green text-2 text-bold mt-5">Juices</div>
+                <div class="text-green text-3 text-bold">Broccoli shake</div>
+                <div class="text-green text-2"> ★★★★★ (1)</div>
+                <div class="text-white text-2">175.00 DA</div>
+                <button class="cardBtn text-green rounded-1 bg-yellow p-1 border-green gap-3"> Add to card</button>
+                <img src="/FoodMart/assets/image/Avocado.png" alt="Avocado" class="card-image p-absolute w-60 ">
+            </div>
+            <div class="card-container p-relative bg-pink w-20 rounded-2 p-2">
+                <div class="text-green text-2 text-bold mt-5">Juices</div>
+                <div class="text-green text-3 text-bold">Broccoli shake</div>
+                <div class="text-green text-2"> ★★★★★ (1)</div>
+                <div class="text-white text-2">175.00 DA</div>
+                <button class="cardBtn text-green rounded-1 bg-yellow p-1 border-green gap-3"> Add to card</button>
+                <img src="/FoodMart/assets/image/Dragon.png" alt="Dragon Fruit" class="card-image p-absolute w-60 ">
+            </div>
+        </div>
+    </section>
+    <!-- main banner -->
+<section class="d-flex gap-2 mt-3">
+        <div class="mainBannerLeft">
+            <div class="w-70">
+                <h1 class="text-4 mt-1"> Fruits § <br>
+                    Vegetable</h1>
+                <p class="text-2 mt-1"> These superfoods are packed with vital nutrients, including vitamins
+                    and minerals that can help keep you health. Plus, they’re easy to
+                    enjoy-just add water and let the magic happen!</p>
+                <button class="moreBtn bg-yellow mt-1 text-green"><span> View More </span>
+                    <span> > </span></button>
+            </div>
+        </div>
+        <div class="mainBannerRight">
+            <div class="w-70">
+                <h1 class="text-4 mt-1"> Fruits § <br>
+                    Vegetable</h1>
+                <p class="text-2 mt-1"> These superfoods are packed with vital nutrients, including vitamins
+                    and minerals that can help keep you health. Plus, they’re easy to
+                    enjoy-just add water and let the magic happen!</p>
+                <button class="moreBtn bg-yellow mt-1 text-green"><span> View More </span>
+                    <span> > </span></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- opinions and comments -->
+
+    <section class="d-flex justify-content-center  mt-5 text-green p-3">
+      <div class=" d-flex justify-content-center w-90  align-items gap-4 ">
+
+        <div class="w-90 ">
+          <h1 class="text-4 mt-1">Categories
+          </h1>
+          <p class="text-2 mt-1 text-justify">These superfoods are packed with vital nutrients, including vitamins
+            and minerals that can help keep you health. Plus, they’re easy to
+            enjoy-just add water and let the magic happen!
+          </p>
+          <button class="productBtn mt-2">
+            <span>Show more</span>
+            <img src="/Foodmart/assets/image/Vector.png" alt="">
+          </button>
+        </div>
+
+        <div class="w-90 d-flex gap-3">
+          <!-- Excellent Service 1 -->
+          <div class="border-yellow rounded-1 p-2 p-relative">
+            <div class="text-yellow  text-3 ">★★★★★ <span class="text-green text-1">45/5</span></div>
+            <div class="text-green text-2 text-bold mt-1">Excellent Service</div>
+            <p class="text-left mt-1 text-2 text-green">
+              These superfoods are packed with vital nutrients, including vitamins
+              and minerals that can help keep you health. Plus, they’re easy to
+              enjoy-just add water and let the magic happen!
+            </p>
+            <div class="d-flex gap-1 align-items-center mt-2">
+              <img class="w-30" src="/FoodMart/assets/image/comment1.png" alt="">
+              <div>
+                <b class="text-2">Mustapha kadi </b> <br>
+                <small>Client</small>
+              </div>
+            </div>
+            <img class="p-h-center left-m1 arrowIcon" src="/FoodMart/assets/image/VectorComment.png" alt="">
+          </div>
+
+          <!-- Excellent Service 2 -->
+          <div class="border-yellow rounded-1 p-3 p-relative">
+            <div class="text-yellow  text-3">★★★★★ <span class="text-green text-1">45/5</span></div>
+            <div class="text-green text-2 text-bold mt-1">Excellent Service</div>
+            <p class="text-left mt-1 text-2 text-green ">
+              These superfoods are packed with vital nutrients, including vitamins
+              and minerals that can help keep you health. Plus, they're easy to
+              enjoy-just add water and let the magic happen!
+            </p>
+            <div class="d-flex gap-1 align-items-center mt-2 mb-1">
+              <img class="w-30" src="/FoodMart/assets/image/comment2.png" alt="">
+              <div>
+                <b class="text-2">Mustapha kadi </b> <br>
+                <small>Client</small>
+              </div>
+            </div>
+            <img class=" p-h-center right-m1 arrowIcon" src="/FoodMart/assets/image/VectorComment2.png" alt="">
+          </div>
+        </div>
+      </div>
+    </section>
+<section class="d-flex justify-content-center align-items-center flex-direction-column">
+  <div class="text-Green text-center max-width-600 d-flex flex-direction-column justify-content-space align-items-center">
+    <h1>Blog § Articles</h1>
+    <p class="mt-2">These superfoods are packed with vital nutrients, 
+        including vitamins and minerals that can help keep you health. 
+        Plus,they’re easy to enjoy-just add water and let the magic happen! </p>
+  </div>
+
+
+   <div class="articleSection w-70 d-flex justify-content-center gap-4 mt-3">
+        <div class=" bgCard w-33 rounded-1 ">
+          <img class="cardImg" src="/FoodMart/assets/image/firstBlog.png" alt="">
+          <div class="articleInformation p-2 mt-1 d-flex flex-direction-column gap-1 ">
+            <h4 class="text-3">Fruit is may reduce risk of breast cancer</h4>
+            <p>These superfoods are packed with vital nutrients, including vitamins and minerals that can help keep you
+              health. Plus, they're easy to enjoy-just add water and let the magic happen!
+            </p>
+            <button class="productBtn justify-content-center">
+              <span>Read More</span> <span>></span>
+            </button>
+          </div>
+        </div>
+        <div class=" bgCard bg-white w-33 rounded-1">
+          <img class="cardImg" src="/FoodMart/assets/image/cat1.png" alt="">
+          <div class="articleInformation p-2 mt-1 d-flex flex-direction-column gap-1 ">
+            <h4 class="text-3">Fruit is an Essential food for our life</h4>
+            <p>These superfoods are packed with vital nutrients, including vitamins and minerals that can help keep you
+              health. Plus, they’re easy to enjoy-just add water and let the magic happen!
+            </p>
+            <button class="productBtn  justify-content-center ">
+              <span>Read More</span> <span>></span>
+            </button>
+          </div>
+        </div>
+        <div class=" bgCard bg-white w-33 rounded-1 ">
+          <img class="cardImg" src="/FoodMart/assets/image/thirdBlog.png" alt="">
+          <div class="articleInformation p-2 mt-1 d-flex flex-direction-column gap-1 ">
+            <h4 class="text-3">Heavy Weight Diet Plan</h4>
+            <p>These superfoods are packed with vital nutrients, including vitamins and minerals that can help keep you
+              health. Plus, they're easy to enjoy-just add water and let the magic happen!
+            </p>
+            <button class="productBtn justify-content-center">
+              <span>Read More</span> <span>></span>
+            </button>
+          </div>
+        </div>
+    </div>
+
+</section>
 </body>
 
 </html>
