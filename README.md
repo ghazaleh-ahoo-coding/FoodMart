@@ -42,18 +42,11 @@ For example, with the VS Code **Live Server** extension, right-click
    repository root (`/`) folder.
 5. Save. GitHub will provide the public site URL after deployment completes.
 
-### Important deployment note
+### Deployment-ready asset paths
 
-This project currently uses several root-relative asset paths such as
-`/FoodMart/assets/...` and `/Front_End_Expert/Foodmart/...`. Root-relative
-paths can fail on a GitHub Pages project site because the site is hosted under
-the repository name. Before publishing, change these URLs in `index.html` and
-`style.css` to relative paths, for example:
-
-```html
-<link rel="stylesheet" href="style.css">
-<img src="assets/image/Apple.png" alt="Sliced red apple">
-```
+Styles and images use relative paths (for example, `style.css` and
+`assets/image/Apple.png`), so they work when the project is hosted as a GitHub
+Pages project site.
 
 ## Technologies
 

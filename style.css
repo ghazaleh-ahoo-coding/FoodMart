@@ -389,10 +389,10 @@ p{
     color: white;
 }
 .mainBannerRight{
-    background: url(/FoodMart/assets/image/berry.png) center/cover no-repeat, rgba(0, 0, 0, 0.464)
+    background: url(assets/image/berry.png) center/cover no-repeat, rgba(0, 0, 0, 0.464)
 }
 .mainBannerLeft{
-    background: url(/FoodMart/assets/image/lemon.png) center/cover no-repeat, rgba(0, 0, 0, 0.464)
+    background: url(assets/image/lemon.png) center/cover no-repeat, rgba(0, 0, 0, 0.464)
 }
 
 
