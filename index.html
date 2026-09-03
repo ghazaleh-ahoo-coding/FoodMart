@@ -13,18 +13,22 @@
     <!-- header section -->
 <header class="header" id="header">
         <!-- descktop nav section -->
-        <nav class="navBar">
+        <nav class="navBar d-mobile-none">
             <h2>FoodMart</h2>
             <!-- menu section -->
-            <ul class="menu">
+            <ul class="menu d_mobile_none">
                 <li><a href="">Home</a></li>
                 <li><a href="">fruit</a></li>
                 <li><a href="">vegtable</a></li>
             </ul>
 
         </nav>
+        <!-- Mobile menue -->
+         <section class= "w60 d-desktop-none ">
+             <a href="#mobileSection"> <img src="/FoodMart/assets/image/menu.svg" alt=""></a>
+         </section>
         <!-- search box setion -->
-        <div class="searchBox">
+        <div class="searchBox d-mobile-none">
             <input id="site-search" name="search" type="search" class="searchInput" aria-label="Search products">
             <select id="category-filter" name="category" class="searchInput" aria-label="Product category">
                 <option value="all">All Categories</option>
@@ -36,7 +40,7 @@
             <img src="/Front_End_Expert/Foodmart/assets/image/🦆 icon _search icon_.png" alt="">
         </div>
 
-        <section class="operation">
+        <section class="operation d-mobile-none">
             <div class="iconBox">
                 <img src="assets/image/Group.png" alt="Profile">
                 <label>Profile</label>
@@ -75,6 +79,39 @@
             <img src="/Foodmart/assets/image/HeaderLable.png" alt="" class="fruitImage">
         </div>
     </section>
+    <main>
+        <!-- Mobile menue section -->
+         <section id="mobileSection" class="mobileSection d-desktop-none">
+            <div class="d-flex-justify-content-space">
+                <div>
+                    <a href="#" class="mb-1">❌</a>
+                </div>
+                <!-- searchboxSection -->
+                 <div class="searchbox">
+                       <input id="site-search" name="search" type="search" class="searchInput" aria-label="Search products">
+            <select id="category-filter" name="category" class="searchInput" aria-label="Product category">
+                <option value="all">All Categories</option>
+                <option value="fruit">Fruit</option>
+                <option value="vegetable">Vegetable</option>
+            </select>
+        
+
+            <img src="/Front_End_Expert/Foodmart/assets/image/🦆 icon _search icon_.png" alt="">
+        </div>
+            </div>
+            <ul class="list-style-none line-height-2 text-2 mt-2">
+        <li>Home</li>
+        <li>Fruit</li>
+        <li>Vegetable</li>
+      </ul>
+      <!-- operations section -->
+      <ul class="list-style-none line-height-2 text-2 mt-1">
+        <li>Profile</li>
+        <li>Wishlist</li>
+        <li>Mycart</li>
+      </ul>
+            
+         </section>
     <!-- product Introduction section -->
 <section class="productIntroduction ">
         <div class="titleIntroduction">
@@ -200,7 +237,6 @@
             </div>
         </div>
     </section>
-<main>
     <!-- Best seller section -->
     <!-- title -->
 <section class="productIntroduction ">

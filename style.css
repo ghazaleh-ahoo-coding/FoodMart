@@ -304,8 +304,8 @@ p{
     grid-template-columns: repeat(3, minmax(0, 320px));
     justify-content: center;
     align-items: stretch;
-    gap: 2rem;
-    width: min(100% - 2rem, 1100px);
+    gap: 1rem;
+     width: 70%;
     margin: 3rem auto;
 }
 
@@ -702,4 +702,80 @@ p{
 
 .pointer {
     cursor: pointer;
+}
+.mobileSection{
+    width: 0;
+    color: white;
+    height: 100dvh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    background-color: #0A490A;
+    transition: all 500ms;
+    opacity: 0;
+    overflow: hidden;
+    display: flex;
+    gap: 2rem;
+    flex-direction: column;
+}
+.mobileSection:target{
+    width: 80%;
+    padding: 1.5rem;
+    opacity: 100;
+}
+.d-desktop-none{
+  display: none !important;
+}
+
+@media (max-width : 768px) {
+    .d-flex{
+        flex-wrap: wrap ;
+    }
+    .w-15{
+        width: 45%;
+    }
+    .w-25{
+        width: 100%;
+    }
+    .w-33{
+        width: 100%;
+    }
+    .w-50{
+        width: 100%;
+    }
+    .banner{
+        padding: 3rem 2rem;
+    }
+    .banner h1{
+        font-size: 2rem;
+    }
+    .discountBadge{
+         position: relative;
+    top: auto;
+    left: auto;
+    right: auto;
+    width: 6rem;
+    margin: 1rem auto 0;
+    }
+    .searchBox{
+        width: 80%;
+    }
+    .searchBox input, 
+    .searchBox select{
+        width: 50%;
+    }
+    .mainBannerLeft,
+    .mainBannerRight{
+        width: 100%;
+    }
+    .productItem{
+        width: 100%;
+    }
+    .d-mobile-none{
+        display: none;
+    }
+    .d-desktop-none{
+        display: block !important;
+    }
 }
