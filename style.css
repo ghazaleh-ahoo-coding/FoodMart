@@ -4,6 +4,19 @@
     box-sizing: border-box;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    min-width: 320px;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+}
+
 /* header style */
 .header {
     display: flex;
@@ -53,6 +66,7 @@ a:hover{
     background-color: #043004;
     color: white;
     cursor: pointer;
+    min-width: 0;
 }
 
 .operation {
@@ -141,7 +155,7 @@ p{
     position: absolute;
     right: 0;
     bottom: 0;
-    width: 40%;
+    width: min(40%, 30rem);
 }
 .fruitImage{
     width: 100%;
@@ -728,7 +742,34 @@ p{
   display: none !important;
 }
 
+@media (max-width: 1100px) and (min-width: 769px) {
+    .header {
+        padding-inline: 1rem;
+        gap: 1rem;
+    }
+
+    .menu,
+    .operation {
+        gap: 0.75rem;
+    }
+
+    .cardSection {
+        width: calc(100% - 2rem);
+        grid-template-columns: repeat(2, minmax(0, 320px));
+    }
+
+    .productsSection,
+    .articlesGrid {
+        width: calc(100% - 2rem);
+    }
+}
+
 @media (max-width : 768px) {
+    .header {
+        min-height: 4rem;
+        padding: 0.75rem 1rem;
+    }
+
     .d-flex{
         flex-wrap: wrap ;
     }
@@ -745,10 +786,23 @@ p{
         width: 100%;
     }
     .banner{
+        min-height: 24rem;
         padding: 3rem 2rem;
     }
     .banner h1{
         font-size: 2rem;
+    }
+    .banner p {
+        max-width: 60%;
+        font-size: 1rem;
+    }
+    .banner > *:not(.fruitBanner) {
+        position: relative;
+        z-index: 1;
+    }
+    .fruitBanner {
+        width: 48%;
+        opacity: 0.65;
     }
     .discountBadge{
          position: relative;
@@ -772,10 +826,157 @@ p{
     .productItem{
         width: 100%;
     }
+
+    /* Product cards */
+    .cardSection {
+        width: calc(100% - 2rem);
+        grid-template-columns: minmax(0, 1fr);
+        margin: 2rem auto;
+    }
+    .cardItem {
+        min-height: auto;
+    }
+    .cardItem > img {
+        height: 220px;
+    }
+    .cardInformation {
+        gap: 1rem;
+    }
+
+    /* Best products */
+    .bestProducts {
+        padding: 2rem 1rem;
+    }
+    .titleIntroduction {
+        flex-direction: column;
+        gap: 1rem;
+        margin-top: 1rem;
+        text-align: center;
+    }
+    .titleIntroduction strong {
+        font-size: 2rem;
+    }
+    .bestProductsGrid {
+        display: grid;
+        grid-template-columns: minmax(0, 1fr);
+        width: 100%;
+        gap: 1.5rem;
+    }
+    .bestProductsGrid > div {
+        width: 100%;
+        max-width: 360px;
+        min-height: 310px;
+        margin: 0 auto;
+        overflow: hidden;
+    }
+    .bestProductsGrid .card-image {
+        top: 1rem;
+        right: 1rem;
+        width: 42%;
+    }
+    .bestProductsGrid > div > .mt-5 {
+        margin-top: 8rem;
+    }
+
+    /* Banners, testimonials, and articles */
+    .mainBanners {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        gap: 0;
+    }
+    .mainBannerLeft,
+    .mainBannerRight {
+        padding: 3rem 0;
+    }
+    .mainBannerLeft p,
+    .mainBannerRight p {
+        max-width: 100%;
+    }
+    .mainBannerLeft .w-70,
+    .mainBannerRight .w-70 {
+        width: 85%;
+    }
+    .testimonials {
+        padding: 2rem 1rem;
+        margin-top: 2rem;
+    }
+    .testimonialsContent,
+    .testimonialCards {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+    }
+    .testimonialCards > div {
+        width: 100%;
+    }
+    .testimonialCards .arrowIcon {
+        display: none;
+    }
+    .articles {
+        padding: 0 1rem;
+    }
+    .articlesGrid {
+        width: 100%;
+        flex-direction: column;
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+    .articlesGrid > div {
+        width: 100%;
+        max-width: 420px;
+    }
+
+    /* Footer */
+    .footerSection {
+        flex-direction: column;
+        flex-wrap: nowrap;
+        padding: 2rem 1.5rem;
+        margin-top: 2rem;
+    }
+    .footerSection > div,
+    .footerSection > ul {
+        width: 100%;
+    }
+    .bottomFooter {
+        width: calc(100% - 2rem);
+        margin: 1rem;
+        padding: 1rem;
+        flex-direction: column;
+        gap: 1rem;
+        text-align: center;
+    }
+
+    .footerSection {
+        gap: 2rem;
+    }
+
+    .footerSection p {
+        font-size: 1rem;
+    }
+
     .d-mobile-none{
         display: none;
     }
     .d-desktop-none{
         display: block !important;
+    }
+}
+
+@media (max-width: 480px) {
+    .banner {
+        padding: 2rem 1rem;
+    }
+    .productsSection {
+        width: calc(100% - 2rem);
+        margin: 2rem auto;
+    }
+    .cardItem .inputBox {
+        grid-template-columns: 1fr;
+    }
+    .emailbox {
+        flex-wrap: nowrap;
+    }
+    .emailbox input {
+        min-width: 0;
     }
 }
